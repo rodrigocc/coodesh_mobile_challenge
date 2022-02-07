@@ -33,12 +33,12 @@ void main() {
 
   // test('Deve retornar uma Failure caso haja erro com a requisição', () async {
   //   when(() => repository.fetchPatientsByLimit(any()))
-  //       .thenAnswer((_) async => const Right(<Results>[]));
+  //       .thenAnswer((_) async => Left(Failure()));
 
-  //   final result = await useCase.fetchPatientsByLimit(userLimit);
+  //   final result = await useCase.fetchPatientsByLimit(0);
 
-  //   expect(result, const Right(<Results>[]));
+  //   expect(result, Left(Failure()));
 
-  //   verify(() => repository.fetchPatientsByLimit(any()));
+  //   // verify(() => repository.fetchPatientsByLimit(any()));
   // });
 }

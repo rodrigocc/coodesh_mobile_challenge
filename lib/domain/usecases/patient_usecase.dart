@@ -3,6 +3,6 @@ import 'package:dartz/dartz.dart';
 
 import 'errors/failure.dart';
 
-abstract class PatientUseCase {
+abstract class IPatientUseCase {
   Future<Either<Failure, List<Results>>> fetchPatientsByLimit(int userLimit);
 }

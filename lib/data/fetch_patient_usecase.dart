@@ -5,7 +5,7 @@ import 'package:coodesh_mobile_challenge/domain/usecases/patient_usecase.dart';
 
 import 'package:dartz/dartz.dart';
 
-class FetchPatientUseCase implements PatientUseCase {
+class FetchPatientUseCase implements IPatientUseCase {
   final IFetchPatientRepository repository;
 
   const FetchPatientUseCase({required this.repository});
