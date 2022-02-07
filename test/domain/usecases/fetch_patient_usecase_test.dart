@@ -1,7 +1,7 @@
 import 'package:coodesh_mobile_challenge/data/fetch_patient_usecase.dart';
 import 'package:coodesh_mobile_challenge/domain/entities/patient.dart';
 import 'package:coodesh_mobile_challenge/domain/repositories/fetch_patient_repository.dart';
-import 'package:coodesh_mobile_challenge/domain/usecases/errors/failure.dart';
+
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -39,8 +39,6 @@ void main() {
 
   //   expect(result, Left(ServerFailure()));
 
-  //   verify(() => repository);
-
-  //   // verify(() => repository.fetchPatientsByLimit(any()));
+  //   verify(() => repository.fetchPatientsByLimit(userLimit)).called(1);
   // });
 }
