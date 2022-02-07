@@ -4,5 +4,6 @@ import 'package:dartz/dartz.dart';
 import 'errors/failure.dart';
 
 abstract class IPatientUseCase {
-  Future<Either<Failure, List<Results>>> fetchPatientsByLimit(int userLimit);
+  Future<Either<Failure, List<PatientEntity>>> fetchPatientsByLimit(
+      int userLimit);
 }

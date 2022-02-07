@@ -1,10 +1,10 @@
-class Patient {
+class PatientEntity {
   List<Results> results;
 
-  Patient({required this.results});
+  PatientEntity({required this.results});
 
-  static Patient fromJson(Map<String, dynamic> json) {
-    return Patient(results: json['results']);
+  static PatientEntity fromJson(Map<String, dynamic> json) {
+    return PatientEntity(results: json['results']);
   }
 }
 

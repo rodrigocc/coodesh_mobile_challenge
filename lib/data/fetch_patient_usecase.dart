@@ -11,7 +11,7 @@ class FetchPatientUseCase implements IPatientUseCase {
   const FetchPatientUseCase({required this.repository});
 
   @override
-  Future<Either<Failure, List<Results>>> fetchPatientsByLimit(
+  Future<Either<Failure, List<PatientEntity>>> fetchPatientsByLimit(
       int userLimit) async {
     return await repository.fetchPatientsByLimit(userLimit);
   }

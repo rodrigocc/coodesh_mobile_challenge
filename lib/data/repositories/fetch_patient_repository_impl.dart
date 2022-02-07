@@ -10,7 +10,7 @@ class FetchPatientRepositoryImpl implements IFetchPatientRepository {
   FetchPatientRepositoryImpl(this.httpService);
 
   @override
-  Future<Either<Failure, List<Results>>> fetchPatientsByLimit(
+  Future<Either<Failure, List<PatientEntity>>> fetchPatientsByLimit(
       int userLimit) async {
     // TODO: implement fetchPatientsByLimit
     throw UnimplementedError();

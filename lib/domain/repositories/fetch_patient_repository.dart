@@ -3,5 +3,6 @@ import 'package:coodesh_mobile_challenge/domain/usecases/errors/failure.dart';
 import 'package:dartz/dartz.dart';
 
 abstract class IFetchPatientRepository {
-  Future<Either<Failure, List<Results>>> fetchPatientsByLimit(int userLimit);
+  Future<Either<Failure, List<PatientEntity>>> fetchPatientsByLimit(
+      int userLimit);
 }
