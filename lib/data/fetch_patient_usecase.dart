@@ -13,6 +13,9 @@ class FetchPatientUseCase implements IPatientUseCase {
   @override
   Future<Either<Failure, List<PatientEntity>>> fetchPatientsByLimit(
       int userLimit) async {
+    if (userLimit == 0 || userLimit < 0) {
+      return Left(InvalidParamsFailure());
+    }
     return await repository.fetchPatientsByLimit(userLimit);
   }
 }

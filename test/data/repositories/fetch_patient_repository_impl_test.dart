@@ -2,6 +2,7 @@ import 'package:coodesh_mobile_challenge/data/datasources/fetch_patient_datasoru
 import 'package:coodesh_mobile_challenge/data/models/patient_model.dart';
 import 'package:coodesh_mobile_challenge/data/repositories/fetch_patient_repository_impl.dart';
 import 'package:coodesh_mobile_challenge/domain/entities/patient.dart';
+import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
@@ -31,8 +32,16 @@ void main() {
     ]),
   ];
 
+  const tUserlimit = 20;
+
   test('Deve retornar um ListPatientModel quando chamado o DataSource', () {
     when(() => dataSource.fetchPatientsByLimit(any()))
         .thenAnswer((_) async => tlistPatientModel);
   });
+
+  final result = repository.fetchPatientsByLimit(tUserlimit);
+
+  expect(result, Right(tlistPatientModel));
+
+  verify(() => dataSource.fetchPatientsByLimit(tUserlimit)).called(1);
 }
