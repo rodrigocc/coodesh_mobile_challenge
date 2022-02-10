@@ -1,7 +1,12 @@
-class PatientEntity {
+import 'package:equatable/equatable.dart';
+
+class PatientEntity extends Equatable {
   final List<Results> results;
 
-  PatientEntity({required this.results});
+  const PatientEntity({required this.results});
+
+  @override
+  List<Object?> get props => [results];
 }
 
 class Results {
